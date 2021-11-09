@@ -1,9 +1,12 @@
-<h1>Books</h1>
-<tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-</tr>
+<div>
+<%=   flash[:notice]  %>
+</div>
 
-  <%= link_to "Edit", edit_blog_path(@blog) %>
-  <%= link_to "Destroy", blog_path(@blog), method: :delete %>
+<table>
+    <tr><Strong>Title:</Strong></tr><tr><%= @book.title %></tr></br>
+    <tr><Strong>Body:</Strong></tr><tr><%= @book.body %></tr>
+    <tr colspan="3"></tr>
+</table>
+
+  <%= link_to "Edit", edit_book_path %><span> |</span>
+  <%= link_to "Back", "/books" %>
